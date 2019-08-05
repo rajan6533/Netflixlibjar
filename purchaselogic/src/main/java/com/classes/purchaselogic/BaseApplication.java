@@ -176,10 +176,10 @@ public abstract class BaseApplication extends Application {
                         // jsonarray found
                         // Getting Array of jsonarray
 
-                    } else {
-                        /*
-                          Updating parsed JSON data into ListView
-                         */
+                    } else if (success == 2){
+                                /*
+                                  Updating parsed JSON data into ListView
+                                 */
 
                         try {
                             System.out.println("Rajan_codecanyon");
