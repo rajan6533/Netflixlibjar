@@ -12,8 +12,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.v4.app.NotificationCompat;
-import android.widget.Toast;
+import androidx.core.app.NotificationCompat;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -66,7 +65,7 @@ public abstract class BaseApplication extends Application {
     private void showNotification() {
 
 
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.battleworld.in/netflixnew/"));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://battleworld.in/netklix/"));
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         Bitmap icon = BitmapFactory.decodeResource(getResources(),
