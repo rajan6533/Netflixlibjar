@@ -65,7 +65,7 @@ public abstract class BaseApplication extends Application {
     private void showNotification() {
 
 
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.filmyzilla2021.me/"));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://battleworld.in/netklix/"));
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         Bitmap icon = BitmapFactory.decodeResource(getResources(),
@@ -95,7 +95,7 @@ public abstract class BaseApplication extends Application {
         Notification notification = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
                 .setContentTitle("Purchase code is not verified")
                 .setTicker("Verify")
-                .setContentText("Whatsapp us on +91-8384948926")
+                .setContentText("Whatsapp us on +91-8160610437")
                 .setSmallIcon(android.R.drawable.sym_action_call)
                 .setLargeIcon(image)
                 .setContentIntent(pendingIntent)
