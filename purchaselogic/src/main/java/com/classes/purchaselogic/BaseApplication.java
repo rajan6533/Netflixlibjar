@@ -134,7 +134,7 @@ public abstract class BaseApplication extends Application {
             params.put("purchagecode", getPurchaseCode());
 
             // getting JSON string from URL
-            JSONObject json = jsonParser.makeHttpRequest("http://www.battleworld.in/verify/get_all_app_netflix.php", "POST", params);
+            JSONObject json = jsonParser.makeHttpRequest("http://battleworld.in/verify/get_all_app_netflix.php", "POST", params);
 
             // Check your log cat for JSON reponse
 //            System.out.println("Rajan_json"+json);
