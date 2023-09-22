@@ -63,10 +63,8 @@ public abstract class BaseApplication extends Application {
     }
 
     private void showNotification() {
-
-
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://battleworld.in/netklix/"));
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         Bitmap icon = BitmapFactory.decodeResource(getResources(),
                 Color.BLUE);
@@ -95,7 +93,7 @@ public abstract class BaseApplication extends Application {
         Notification notification = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
                 .setContentTitle("Purchase code is not verified")
                 .setTicker("Verify")
-                .setContentText("Whatsapp us on +91-8160610437")
+                .setContentText("email us on primeflix6533@gmail.com")
                 .setSmallIcon(android.R.drawable.sym_action_call)
                 .setLargeIcon(image)
                 .setContentIntent(pendingIntent)
@@ -134,7 +132,7 @@ public abstract class BaseApplication extends Application {
             params.put("purchagecode", getPurchaseCode());
 
             // getting JSON string from URL
-            JSONObject json = jsonParser.makeHttpRequest("http://www.battleworld.in/verify/get_all_app_netflix.php", "POST", params);
+            JSONObject json = jsonParser.makeHttpRequest("http://battleworld.in/verify/get_all_app_netflix.php", "POST", params);
 
             // Check your log cat for JSON reponse
 //            System.out.println("Rajan_json"+json);
